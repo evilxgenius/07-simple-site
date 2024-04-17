@@ -1,0 +1,33 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.experience {
+  .experience__item {
+    display: flex;
+    gap: $gap;
+    justify-content: center;
+  }
+
+  @include xl {
+    flex-basis: 28%;
+  }
+
+  @include md {
+    flex-basis: 45%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  &__number {
+    font-size: 1.3125rem; /* 21px */
+    font-weight: 500;
+  }
+
+  &__image-wrap {
+    order: -1;
+  }
+}

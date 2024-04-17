@@ -1,0 +1,30 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.experience {
+  background-color: $color-primary;
+  padding: 100px 0;
+  color: $color-white;
+
+  .container {
+    display: flex;
+    gap: $gap;
+    flex-wrap: wrap;
+
+    @include xl-min {
+      justify-content: space-between;
+    }
+
+    @include xl-xs {
+      justify-content: space-around;
+    }
+
+    @include xs {
+      justify-content: center;
+    }
+  }
+
+  &__image {
+    width: 50px;
+  }
+}
